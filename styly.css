@@ -146,3 +146,25 @@ li img {
   margin-bottom: 30px;
 }
 
+@media only screen and (min-width: 1400px) {
+
+  .ramec {
+    width: 640px;
+  }
+  .obrazky {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .obrazek {
+    width: 320px;
+  }
+
+  .obrazek:nth-child(2n+1) img {
+    padding-right: 15px;
+  }
+
+  .obrazek:nth-child(2n) img{
+    padding-left: 15px;
+  }
+}
