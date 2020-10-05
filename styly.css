@@ -30,18 +30,17 @@ html {
   width: 100%;
   padding: 40px;
 }
-.ramec {
+
+
+.ramec, .ramec2 {
   background-color: #283e50;
-  /*   display: flex;
-  flex-direction: column; */
   width: 320px;
   text-align: center;
   margin: auto;
-  /* margin-bottom: 50%; */
+  
 }
 
 .image {
-  /*height: auto;*/
   width: 100%;
 }
 
@@ -132,7 +131,7 @@ li img {
 }
 
 .obrazek figcaption {
-  margin-top: 0px;
+  margin-top: 5px;
   margin-bottom: 0px;
   margin-left: 30px;
   margin-right: 30px;
@@ -140,6 +139,7 @@ li img {
   line-height: 1em;
   font-family: Arial, Helvetica, sans-serif;
   color: whitesmoke;
+  font-size: 14px;
 }
 
 .obrazek:last-child {
@@ -148,7 +148,7 @@ li img {
 
 @media only screen and (min-width: 1400px) {
 
-  .ramec {
+  .ramec2 {
     width: 640px;
   }
   .obrazky {
@@ -167,4 +167,9 @@ li img {
   .obrazek:nth-child(2n) img{
     padding-left: 15px;
   }
+
+  .obrazek figcaption {
+    font-size: 13px;
+  }
 }
+
