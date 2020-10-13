@@ -40,6 +40,29 @@ html {
   
 }
 
+.ramec3 {
+  max-width: 80vmin;
+  text-align: center;
+  margin: auto;
+}
+
+.main-top {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-bottom {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+}
+
+.main-bottom button {
+  width: 8vmin;
+  height: 8vmin;
+}
+
 .image {
   width: 100%;
 }
@@ -83,6 +106,30 @@ a {
   text-decoration: none;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.homeButton {
+  background-color: #1fcca4;
+  align-items: center; 
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px; 
+}
+
+.restartButton {
+  background-color: #0197f6;
+  align-items: center; 
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  
+}
+
 .uvodniStranka {
   background-color: #1fcca4;
   display: block;
@@ -118,7 +165,7 @@ li {
   padding-bottom: 10px;
 }
 
-li img {
+li img, .player img  {
   height: 1em;
   width: 1em;
   filter: invert(100%);
