@@ -31,49 +31,12 @@ html {
   padding: 40px;
 }
 
-
 .ramec, .ramec2 {
   background-color: #283e50;
   width: 320px;
   text-align: center;
   margin: auto;
   
-}
-
-.ramec3 {
-  max-width: 80vmin;
-  text-align: center;
-  margin: auto;
-}
-
-.main-top {
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom:20px;
-}
-
-.main-bottom {
-  display: grid;
-  grid-template-rows: repeat(10, 1fr);
-  grid-template-columns: repeat(10, 1fr);
-  background-image: linear-gradient(#615dad, #ffc8da)t;
-  
-}
-
-.main-bottom button {
-  width: 8vmin;
-  height: 8vmin;
-  border-color: black;
-  background-color: white;
-  opacity: 0.5;
-}
-
-.main-bottom button:hover {
-  background-color:#f4dce4;
-  opacity: 1;
-  cursor: pointer;
 }
 
 .player img {
@@ -129,46 +92,6 @@ a {
   text-decoration: none;
 }
 
-.buttons {
-  display: flex;
-}
-
-.player {
-  display: flex;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 24px;
-  margin-top: 5px;
-}
-
-.homeButton {
-  background-color: #1fcca4;
-  align-items: center; 
-  display: flex;
-  justify-content: center;
-  width: 50px;
-  height: 50px; 
-  margin-right: 10px;
-  border-radius: 3px;
-}
-
-.restartButton {
-  background-color: #0197f6;
-  align-items: center; 
-  display: flex;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 3px;
-}
-
-.homeButton:hover {
-  background-color: #1cbb96;
-}
-
-.restartButton:hover {
-  background-color: #0090e9;
-}
 .uvodniStranka {
   background-color: #1fcca4;
   display: block;
@@ -259,3 +182,80 @@ li img, .player img  {
   }
 }
 
+/* Třetí úkol */
+
+.ramec3 {
+  max-width: 80vmin;
+  text-align: center;
+  margin: auto;
+}
+
+.main-top {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom:20px;
+}
+
+.main-bottom {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  background-image: linear-gradient(#615dad, #ffc8da)t;
+  
+}
+
+.main-bottom button {
+  width: 8vmin;
+  height: 8vmin;
+  border-color: black;
+  background-color: white;
+  opacity: 0.5;
+}
+
+.main-bottom button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+}
+
+.homeButton {
+  background-color: #1fcca4;
+  align-items: center; 
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 50px; 
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.restartButton {
+  background-color: #0197f6;
+  align-items: center; 
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+}
+
+.player {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.homeButton:hover {
+  background-color: #1cbb96;
+}
+
+.restartButton:hover {
+  background-color: #0090e9;
+}
