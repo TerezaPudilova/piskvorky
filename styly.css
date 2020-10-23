@@ -31,16 +31,16 @@ html {
   padding: 40px;
 }
 
-.ramec, .ramec2 {
+.ramec,
+.ramec2 {
   background-color: #283e50;
   width: 320px;
   text-align: center;
   margin: auto;
-  
 }
 
 .player img {
-margin-left: 5px;
+  margin-left: 5px;
 }
 
 .image {
@@ -127,7 +127,8 @@ li {
   padding-bottom: 10px;
 }
 
-li svg, .player svg  {
+li svg,
+.player svg {
   height: 1em;
   width: 1em;
   filter: invert(100%);
@@ -156,7 +157,6 @@ li svg, .player svg  {
 }
 
 @media only screen and (min-width: 1400px) {
-
   .ramec2 {
     width: 640px;
   }
@@ -169,11 +169,11 @@ li svg, .player svg  {
     width: 320px;
   }
 
-  .obrazek:nth-child(2n+1) img {
+  .obrazek:nth-child(2n + 1) img {
     padding-right: 15px;
   }
 
-  .obrazek:nth-child(2n) img{
+  .obrazek:nth-child(2n) img {
     padding-left: 15px;
   }
 
@@ -195,15 +195,14 @@ li svg, .player svg  {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
 .main-bottom {
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr);
-  background-image: linear-gradient(#615dad, #ffc8da)t;
-  
+  background-image: linear-gradient(#615dad, #ffc8da) t;
 }
 
 .main-bottom button {
@@ -212,6 +211,21 @@ li svg, .player svg  {
   border-color: black;
   background-color: white;
   opacity: 0.5;
+  padding: 10px;
+}
+
+.main-bottom .button--circle {
+  background-image: url('imgs/circleBlack.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+
+.main-bottom .button--cross {
+  background-image: url('imgs/crossBlack.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: content-box;
 }
 
 .main-bottom button:hover {
@@ -225,18 +239,18 @@ li svg, .player svg  {
 
 .homeButton {
   background-color: #1fcca4;
-  align-items: center; 
+  align-items: center;
   display: flex;
   justify-content: center;
   width: 50px;
-  height: 50px; 
+  height: 50px;
   margin-right: 10px;
   border-radius: 3px;
 }
 
 .restartButton {
   background-color: #0197f6;
-  align-items: center; 
+  align-items: center;
   display: flex;
   justify-content: center;
   width: 50px;
