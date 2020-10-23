@@ -209,8 +209,7 @@ li svg,
   width: 8vmin;
   height: 8vmin;
   border-color: black;
-  background-color: white;
-  opacity: 0.5;
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
 }
 
