@@ -3,7 +3,9 @@
 let player = 'circle';
 const playerdiv = document.querySelector('.player');
 
-document.querySelectorAll('.button').forEach((item) => {
+const board = document.querySelectorAll('.button');
+
+board.forEach((item) => {
   item.addEventListener('click', (event) => {
     if (item.className === 'button') {
       if (player === 'circle') {
@@ -27,3 +29,29 @@ document.querySelectorAll('.button').forEach((item) => {
   });
 });
 
+function getPosition(field) {
+  const convertedField = String(field);
+  if (convertedField.length === 1) {
+    return {
+      row: 0,
+      column: field,
+    };
+  } else {
+    return {
+      row: Number(convertedField[0]),
+      column: Number(convertedField[1]),
+    };
+  }
+}
+
+function getField(row, column) {
+  if (row === 0) {
+    return {
+      field: board[column],
+    };
+  } else {
+    return {
+      field: board[Number(`${row}${column}`)],
+    };
+  }
+}
