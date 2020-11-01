@@ -1,12 +1,14 @@
 'use strict';
 
 let player = 'circle';
+let played = ''
 const playerdiv = document.querySelector('.player');
-
+const boardSize = 10;
 const board = document.querySelectorAll('.button');
 
 board.forEach((item) => {
   item.addEventListener('click', (event) => {
+    played = player
     if (item.className === 'button') {
       if (player === 'circle') {
         item.className = 'button--circle';
@@ -26,15 +28,26 @@ board.forEach((item) => {
      </svg>`;
       }
     }
+    if(isWinningMove(item)) {
+      let r = confirm("Vyhrál" + " " + played)
+      if (r === true) location.reload();
+    }
   });
 });
 
 function getPosition(field) {
-  const convertedField = String(field);
+  let convertedField = 0;
+  for (let i = 0; i < board.length; i++) {
+    if (field === board[i]) {
+      convertedField = i
+      break
+    }
+  }
+  convertedField = String(convertedField)
   if (convertedField.length === 1) {
     return {
       row: 0,
-      column: field,
+      column: Number(convertedField),
     };
   } else {
     return {
@@ -46,12 +59,53 @@ function getPosition(field) {
 
 function getField(row, column) {
   if (row === 0) {
-    return {
-      field: board[column],
-    };
+    return board[column]
   } else {
-    return {
-      field: board[Number(`${row}${column}`)],
-    };
+    return board[Number(`${row}${column}`)]
   }
+}
+
+function getSymbol(field) {
+  if (field.className.includes('button--cross')) {
+    return 'cross';
+  } else if (field.className.includes('button--circle')) {
+    return 'circle';
+  } else {
+    return undefined;
+  }
+}
+
+function isWinningMove(field) {
+  const position = getPosition(field);
+  let counter = 0;
+  for (let i = 0; i < boardSize; i++) {
+    const policko = getField(position.row,i);
+    const symbol = getSymbol(policko);
+    if (symbol !== undefined) {
+      if (symbol === played) counter++;
+    }
+    if (counter === 5) {
+     return true
+    } 
+  }
+  return false
+  
+  /* const position = getPosition(field);
+  let counterCross = 0;
+  let counterCircle = 0;
+  for (let i = 0; i < boardSize; i++) {
+    const policko = getField(position.row,i);
+    const symbol = getSymbol(policko);
+    if (symbol !== undefined) {
+      if (symbol === "cross") counterCross++;
+      else if (symbol === "circle") counterCircle++;
+    }
+    if (counterCircle === 5) {
+      alert("Vyhrál kroužek")
+      break
+    } else if (counterCross === 5) {
+      alert("Vyhrál křížek")
+      break
+    }
+  } */
 }
